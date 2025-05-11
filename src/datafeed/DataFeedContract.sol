@@ -2,6 +2,11 @@
 pragma solidity 0.8.24;
 import {AggregatorV3Interface} from "@chainlink/contracts/src/v0.8/shared/interfaces/AggregatorV3Interface.sol";
 
+/**
+ * @title DataFeed 喂价
+ * @author cedar
+ * @notice 调用chainlink的DataFeed喂价合约
+ */
 contract DataFeedContract {
     AggregatorV3Interface internal dataFeed;
 
@@ -24,4 +29,3 @@ contract DataFeedContract {
         return uint256(answer);
     }
 }
-//forge install smartcontractkit/chainlink-brownie-contracts --no-commit
